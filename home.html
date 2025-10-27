@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="favicon/" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="/site.webmanifest" />
+    
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/footer.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Marsal-auto</title>
+    <script src="js/menu.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <img src="image/logo.png" alt="logo" class="logoImg">
+            <h1 class="companyName">Marshal Auto Parts</h1>
+        </div>
+        <nav id="primary-nav" class="header-right">
+            <a href="home.html">
+                <p class="homeMenu" >Home</p>
+            </a>
+            <a href="catalog.html">
+                <p class="productsMenu">Products</p>
+            </a>
+            
+            <p class="contactMenu">Contact</p>
+            <div class="burger">&#9776;</div>
+        </nav>
+    </header>
+
+    <!-- Мобильное оверлей-меню (скрыто по умолчанию). Дублирует навигацию, но это минимальное изменение и даёт корректную работу -->
+    <div id="mobileMenuOverlay" class="mobile-menu-overlay" aria-hidden="true">
+        <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Mobile menu">
+            <button class="mobile-close" aria-label="Close menu">&times;</button>
+            <ul class="mobile-menu-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="catalog.html">Products</a></li>
+                <li><a href="contactInfo.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="name-page">
+        <h1 class="headerHomePage">
+            MARSHAL AUTO PARTS
+        </h1>
+        <p class="namePageParagraphHomePage">
+            Leading automotive parts export company, founded in 2009
+        </p>
+        <hr class="ContactInfo-line">
+    </div>
+
+   <div class="NewArivalThisMonth-block">
+    <h1 class="headerNewArivalThisMonth">New Arrivals This Month</h1>
+
+    <!-- Обёртка для стрелок + карточек -->
+    <div class="ProductRow">
+      <img src="image/leftArrow.png" alt="" class="leftArrow">
+
+      <div class="ProductCard">
+        <img src="image/image.png" alt="" class="imageProductCard">
+        <div class="ProductCard-Content">
+          <h1 class="ProductCard-h1">Doors Handles</h1>
+          <p class="ProductCard-paragraph">Body Parts</p>
+          <p class="ProductCard-paragraph">Chrome & painted door handle sets</p>
+          <h3 class="ProductCard-h3">In stock</h3>
+        </div>
+      </div>
+
+      <div class="ProductCard">
+        <img src="image/image.png" alt="" class="imageProductCard">
+        <div class="ProductCard-Content">
+          <h1 class="ProductCard-h1">Doors Handles</h1>
+          <p class="ProductCard-paragraph">Body Parts</p>
+          <p class="ProductCard-paragraph">Chrome & painted door handle sets</p>
+          <h3 class="ProductCard-h3">In stock</h3>
+        </div>
+      </div>
+
+      <div class="ProductCard">
+        <img src="image/image.png" alt="" class="imageProductCard">
+        <div class="ProductCard-Content">
+          <h1 class="ProductCard-h1">Doors Handles</h1>
+          <p class="ProductCard-paragraph">Body Parts</p>
+          <p class="ProductCard-paragraph">Chrome & painted door handle sets</p>
+          <h3 class="ProductCard-h3">In stock</h3>
+        </div>
+      </div>
+
+      <img src="image/rightArrow.png" alt="" class="rightArrow">
+    </div>
+
+    <button href="catalog.html" class="NewArivalThisMonth-btnAllViews">View All New Parts</button>
+  </div>
+
+    <div class="carsEmblem">
+        <div class="Audi-block">
+            <img src="image/audi.png" alt="" class="audi-img">
+            <p>Audi</p>
+        </div>
+        <div class="Mazda-block">
+            <img src="image/mazda.png" alt="" class="mazda-img">
+            <p>Mazda</p>
+        </div>
+        <div class="BMW-block">
+            <img src="image/bmw.png" alt="" class="bmw-img">
+            <p>BMW</p>
+        </div>
+        <div class="Mercedes-block">
+            <img src="image/Mercedes.png" alt="" class="Mercedes-img">
+            <p>Mercedes-Benz</p>
+        </div>
+        <div class="Toyota-block">
+            <img src="image/toyota.png" alt="" class="toyota-img">
+            <p>Toyota</p>
+        </div>
+        <div class="Lexus-block">
+            <img src="image/lexus.png" alt="" class="lexus-img">
+            <p>Lexus</p>
+        </div>
+        <div class="Volvo-block">
+            <img src="image/volvo.png" alt="" class="volvo-img">
+            <p>Volvo</p>
+        </div>
+
+    </div>
+
+
+        <footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__left">
+      <h1 class="site-footer__logo">Marshal Auto Parts</h1>
+      <p class="site-footer__desc">
+        Europe's trusted partner for premium automotive spare parts. Delivering reliability, speed, and simplicity to businesses since 2009.
+      </p>
+    </div>
+
+    <div class="site-footer__right">
+      <h2 class="site-footer__title">Contact Info</h2>
+
+      <!-- Подчеркнутые контакты сделаны ссылками -->
+      <p class="site-footer__contact"><a href="tel:+8618360838122">+86 183 6083 8122</a></p>
+      <p class="site-footer__contact"><a href="mailto:info@marshal-auto.com">info@marshal-auto.com</a></p>
+
+      <!-- address для семантики -->
+      <address class="site-footer__contact">
+        Xiaohe town, Xinbei district, Changzhou city, Jiangsu province, China
+      </address>
+    </div>
+  </div>
+
+  <hr class="site-footer__hr">
+
+  <div class="site-footer__bottom">
+    <p class="site-footer__copyright">&copy; <span id="footer-year"></span> Marshal Auto Parts</p>
+  </div>
+</footer>
+
+
+<script>
+  
+  (function () {
+    var y = new Date().getFullYear();
+    var el = document.getElementById('footer-year');
+    if (el) el.textContent = y;
+  })();
+</script>
+    
+</body>
+
+</html>

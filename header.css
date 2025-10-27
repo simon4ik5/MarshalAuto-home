@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+.header {
+    position: sticky; 
+    top: 0;           
+    z-index: 1000;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px ; 
+    padding-left: 70px;
+    padding-right: 65px;
+    background-color: #ffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* тень для выделения */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logoImg {
+    width: 60px;
+    height: 22px;
+}
+
+.companyName {
+    font-size: 32px;
+    margin-left: 12px;
+}
+
+/* Меню */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.header-right p {
+    margin: 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.burger {
+    display: none; 
+    font-size: 28px;
+    cursor: pointer;
+}
+
+a{
+    color: black; 
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/* ===== Mobile overlay menu styles (used when burger clicked) ===== */
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    display: none; /* shown by JS when opened */
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.45);
+    z-index: 2500;
+    padding: 20px;
+}
+
+.mobile-menu-overlay[aria-hidden="false"] {
+    display: flex;
+}
+
+/* panel inside overlay */
+.mobile-menu-panel {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* close button */
+.mobile-close {
+    background: transparent;
+    border: 0;
+    font-size: 28px;
+    float: right;
+    cursor: pointer;
+}
+
+/* menu list */
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.mobile-menu-list a {
+    display: block;
+    padding: 12px 14px;
+    border-radius: 8px;
+    color: #222;
+    font-weight: 700;
+    text-decoration: none;
+}
+.mobile-menu-list a:hover {
+    background: rgba(3,169,244,0.06);
+}
+
+/* focus styles */
+.mobile-close:focus,
+.mobile-menu-list a:focus,
+.burger:focus { outline: 3px solid rgba(3,169,244,0.2); outline-offset: 3px; }
