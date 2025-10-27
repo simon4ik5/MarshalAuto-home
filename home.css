@@ -1,0 +1,264 @@
+/* Header home page block*/
+.headerHomePage{
+    text-align: center;
+    padding: 56px;
+    margin: 0;
+    font-size: 52px ;
+    font-weight: bold;
+    padding-bottom: 12px;
+}
+
+.namePageParagraphHomePage{
+    text-align: center;
+    font-size: 20px;
+    color: #646464;
+    margin: 0;
+    padding-bottom: 15px ;
+}
+.ContactInfo-line{
+    border-color: #03A9F4;
+    margin: 0;
+    
+}
+/* NEW Arivals this month block */
+
+.headerNewArivalThisMonth{
+    text-align: center;
+    padding: 56px;
+    margin: 0;
+    font-size: 52px ;
+    font-weight: bold;
+    padding-bottom: 67px;
+}
+
+
+
+
+.ProductCard{
+    width: 330px;
+    height: 436px;
+    border-radius: 21px;
+    border: 2px solid #03A9F4;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+    
+}
+
+.imageProductCard{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    position: absolute;
+    padding-left: 85px;
+    padding-top: 50px;
+
+    
+}
+.leftArrow{
+    width: 100px;
+    height: 100px;
+}
+.rightArrow{
+    width: 100px;
+    height: 100px;
+}
+.ProductCard-h1{
+    text-align: center;
+    padding-top: 200px;
+    padding-left: 40px;
+}
+.ProductCard-paragraph{
+    text-align: center;
+    padding-top: 15px;
+    padding-left: 40px;
+}
+
+.ProductCard-h3{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.NewArivalThisMonth-btnAllViews{
+    border: none;
+    background-color: #03A9F4;
+    border-radius: 20px;
+    width: 343px;
+    height: 56px;
+    color: white;
+    font-size: 20px;
+    font-weight: lighter   ;
+    padding: 0px;
+    margin-top: 50px;
+    margin-left: 550px;
+    margin-bottom: 30px;
+
+}
+
+.ProductRow {
+  display: flex;
+  align-items: center;    /* <-- ключ: центрируем по вертикали (стрелки будут по середине карточек) */
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+
+/* Убедимся, что старый margin-left не мешает расположению в ряд */
+.ProductRow > .ProductCard {
+  margin-left: 0 !important;
+  flex: 0 0 auto;
+}
+
+/* Дополнительно: выравнивание/тонкая подстройка стрелок */
+.leftArrow, .rightArrow {
+  align-self: center;
+  /* Если визуально нужно чуть опустить/поднять стрелку, раскомментируйте и подберите смещение:
+     transform: translateY(2px); */
+}
+
+
+/* carousel additions — вставьте в конец styles.css */
+.ProductRow {
+  /* уже должен быть display:flex и overflow-x:auto */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ProductRow > .ProductCard {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+/* тонкая визуальная настройка при перетаскивании */
+.ProductRow.dragging { cursor: grabbing; }
+
+/* указатель для стрелок */
+.leftArrow, .rightArrow {
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles.css
+   Картинки 100x100, подпись под картинкой, блоки растягиваются по ширине экрана с небольшими отступами.
+*/
+
+.carsEmblem {
+  display: grid;
+  /* Автоматически подбираем количество колонок так, чтобы элементы равномерно распределялись по ширине.
+     Каждая колонка минимум 120px (чтобы помещалась подпись и картинка), максимум — равная доля доступной ширины. */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;                 /* небольшой отступ между блоками */
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  align-items: start;
+  margin-top: 12px;
+  margin-bottom: 50px;
+}
+
+/* Каждый блок: картинка сверху, подпись снизу, по центру */
+.carsEmblem > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+/* Картинка фиксированного размера 100x100 */
+.carsEmblem img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain; /* сохраняет пропорции внутри 100x100 */
+  display: block;
+}
+
+/* Подписи под картинкой */
+.carsEmblem p {
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+  color: #222;
+  font-weight: bold;
+  word-wrap: break-word;
+}
+
+/* Опционально: на очень узких экранах уменьшать минимальную ширину колонки */
+@media (max-width: 420px) {
+  .carsEmblem {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+    padding: 8px;
+  }
+}
+
+
+
+.menu-button{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 300px;
+    
+}
+
+.button {
+    border: 2px solid;
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 200px;
+    height: 48px;
+    color: #03A9F4;
+    font-size: 20px;
+    font-weight: lighter;
+    padding: 0;
+    margin-top: 50px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    display: inline-flex; /* было inline-block */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="checkbox"]:checked + .button {
+    background-color: #03A9F4;
+    color: white;
+}
+
+
+.products{
+    background-color: #ffffff;
+    width: 100%;
+    height: 400px;
+}
